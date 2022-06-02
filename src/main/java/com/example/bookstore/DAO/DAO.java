@@ -1,10 +1,12 @@
 package com.example.bookstore.DAO;
 
 import com.example.bookstore.Model.Book;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class DAO {
 public static ArrayList<Book> list;
 public DAO(){

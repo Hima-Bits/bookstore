@@ -2,19 +2,17 @@ package com.example.bookstore.Controller;
 
 import com.example.bookstore.Model.*;
 import com.example.bookstore.Repository.Repository;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/BookStore")
 public class BookController {
     private final String API_KEY="123";
+    @Autowired
     private Repository reso;
-    {
-        reso=new Repository();
 
-    }
     @PostMapping("/create")
     public Result create(@RequestBody UpdateModel updateModel) {
 System.out.println(updateModel);
@@ -94,15 +92,7 @@ System.out.println(updateModel);
     @PutMapping("/update")
     public Result updateBook2(@RequestBody UpdateModel updateModel) {
         try{
-//            Book b=new Book();
-//            b.setId(Long.parseLong(book.getBookId()));
-//            b.setBookName(book.getBookName());
-//            b.setAuthorName(book.getAuthorName());
-//            b.setDescription(book.getDescription());
-//            b.setPrice(book.getPrice());
-//            b.setPublisher(book.getPublisher());
-//            System.out.println("cont+"+book);
-//            System.out.println("b:"+b);
+
             if(updateModel.getKey()!=null && updateModel.getKey().equals(API_KEY))
                 return reso.updateBook(updateModel.getBook());
             else {

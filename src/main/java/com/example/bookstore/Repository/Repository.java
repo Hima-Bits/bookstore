@@ -3,16 +3,17 @@ package com.example.bookstore.Repository;
 import com.example.bookstore.DAO.DAO;
 import com.example.bookstore.Model.Book;
 import com.example.bookstore.Model.Result;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Service
 public class Repository {
+	@Autowired
 private DAO dao;
-{
-	dao=new DAO();
-}
+
 	public Result create(Book book) {
 		long id=getTimeStamp();
 		book=new Book(book,id);
