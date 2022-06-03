@@ -1,86 +1,82 @@
 package com.example.bookstore.Model;
 
-public class Book{
-private long id;
+public class Book {
+    private long id;
 
-@Override
-public String toString() {
-	return "Book [Id=" + id + ", BookName=" + bookName + ", AuthorName=" + authorName + ", description=" + description
-			+ ", price=" + price + ", publisher=" + publisher + "]";
-}
-private String bookName;
-private String authorName;
-private String description;
-private String price;
-private String publisher;
+    @Override
+    public String toString() {
+        return "Book [Id=" + id + ", " +
+                "BookName=" + bookName +
+                ", AuthorName=" + authorName +
+                ", description=" + description +
+                ", price=" + price +
+                ", publisher=" + publisher + "]";
+    }
 
-public Book() {
-	
-}
-public Book(Book b,long id) {
-	this.authorName=b.authorName;
-	this.bookName=b.bookName;
-	this.description=b.description;
-	this.price=b.price;
-	this.publisher=b.publisher;
-	this.id=id;
-}
+    private String bookName;
+    private String authorName;
+    private String description;
+    private String price;
+    private String publisher;
 
-//	public Book clone(Book b) {
-//	this.authorName=b.authorName;
-//	this.bookName=b.bookName;
-//	this.description=b.description;
-//	this.price=b.price;
-//	this.publisher=b.publisher;
-//	this.id=b.id;
-//	return this;
-//}
+    public Book() {
 
-	public long getId() {
-		return id;
-	}
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public Book(Book b, long id) {
+        this.authorName = b.authorName;
+        this.bookName = b.bookName;
+        this.description = b.description;
+        this.price = b.price;
+        this.publisher = b.publisher;
+        this.id = id;
+    }
 
-	public String getBookName() {
-		return bookName;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setBookName(String bookName) {
-		this.bookName = bookName;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getAuthorName() {
-		return authorName;
-	}
+    public String getBookName() {
+        return bookName;
+    }
 
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
-	}
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getAuthorName() {
+        return authorName;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
 
-	public String getPrice() {
-		return price;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setPrice(String price) {
-		this.price = price;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public String getPublisher() {
-		return publisher;
-	}
+    public String getPrice() {
+        return price;
+    }
 
-	public void setPublisher(String publisher) {
-		this.publisher = publisher;
-	}
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
 }
